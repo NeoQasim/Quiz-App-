@@ -30,7 +30,7 @@ const questions: questions[] = [
     },
     {
         question: "What is the  fourth letter a,b,c,d",
-        options: ["a", "b", "c","d"],
+        options: ["a", "b", "c", "d"],
         correctAnswerIndex: 3
     }
 ];
@@ -65,6 +65,15 @@ async function quiz() {
             console.log(chalk.bgRed.white('Incorrect.\n'));
         }
     }
+
+    console.log(score * 100 / questions.length)
+    if (score * 100 / questions.length > 41) {
+        console.log(chalk.bgGreenBright(`Quiz completed! Your score: ${score} out of ${questions.length}, you passed`));
+    }
+    else (
+        console.log(chalk.bgRedBright(`Quiz completed! Your score: ${score} out of ${questions.length}, you failed`))
+    )
+
 }
 
 
