@@ -68,10 +68,10 @@ async function quiz() {
 
     console.log(score * 100 / questions.length)
     if (score * 100 / questions.length > 41) {
-        console.log(chalk.bgGreenBright(`Quiz completed! Your score: ${score} out of ${questions.length}, you passed`));
+        console.log(chalk.bgGreenBright.black(`Quiz completed! Your score: ${score} out of ${questions.length}, you passed`));
     }
     else (
-        console.log(chalk.bgRedBright(`Quiz completed! Your score: ${score} out of ${questions.length}, you failed`))
+        console.log(chalk.bgRedBright.white(`Quiz completed! Your score: ${score} out of ${questions.length}, you failed`))
     )
 
 }
