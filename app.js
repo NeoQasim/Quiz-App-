@@ -53,7 +53,7 @@ async function quiz() {
             console.log(chalk.bgRed.white('Incorrect.\n'));
         }
     }
-    console.log(score * 100 / questions.length);
+    console.log(chalk.blue.bgWhite(score * 100 / questions.length));
     if (score * 100 / questions.length > 41) {
         console.log(chalk.bgGreenBright.black(`Quiz completed! Your score: ${score} out of ${questions.length}, you passed`));
     }
